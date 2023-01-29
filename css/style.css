@@ -3,6 +3,32 @@
   --bg: #010101;
 }
 
+.none {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  background: var(--primary);
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #b6895b;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -16,7 +42,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: white;
-  min-height: 2000px;
+  min-height: 5000px;
 }
 
 /* Navbar */
@@ -95,12 +121,13 @@ body {
 }
 
 .hero::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 1000%;
-  background: linear-gradient(0deg,rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255,  0) 25%);
+  height:20%;
+  bottom: 0;
+  background: linear-gradient( 0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50% );
 }
 
 .hero .content{
@@ -112,7 +139,7 @@ body {
   font-size: 5em;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-  line-height: 1.2;
+  line-height: 1    ;
 }
 
 .hero .content h1 span {
@@ -125,7 +152,7 @@ body {
   line-height: 1.4;
   font-weight: 100;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-
+  /* mix-blend-mode: difference; */
 }
 
 
@@ -136,7 +163,159 @@ body {
   font-size: 1.4rem;
   color: #fff;
   background-color: #b6895b;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
 }
+
+/* About section */
+.about,
+.menu,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+/* Menu section  */
+.menu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p,
+.contact p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding: 4rem ;
+}
+
+.menu .row .menu-card .menu-card-img {
+  border-radius: 50%;
+  width: 200px; 
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+/* contact section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background: #222;
+}
+
+.contact .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .my-alert {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  border: 1px solid #eee;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.contact .row form .my-alert span {
+  padding-right:0.3rem ;
+  font-size: 1.3rem;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+  border-radius: 10px;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .input-group textarea{
+  width: 100%;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  background: none;
+  color: #fff;
+}
+
+
+
 
 
 
@@ -199,6 +378,35 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.about .row {
+  flex-wrap: wrap;
+}
+
+.about .row .about-img img {
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  padding: 0;
+}
+
+.about .row .content h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+}
+
+.menu p {
+  font-size: 1.2rem;
+}
+
+
 }
 /* Mobile Phone*/
 @media (max-width: 450px) {
