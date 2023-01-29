@@ -8,16 +8,13 @@
 }
 
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 2rem auto;
   background: var(--primary);
   padding: 0.6rem 1.5rem;
   font-size: 1.2rem;
   color: #fff;
   background-color: #b6895b;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
   cursor: pointer;
   transition: 0.3s;
@@ -38,11 +35,14 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: white;
-  min-height: 5000px;
 }
 
 /* Navbar */
@@ -113,7 +113,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(/img/coffe\ \(2\).jpg) ;
+  background: url(../img/coffe\ \(2\).jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -272,7 +272,7 @@ body {
   text-align: center;
 }
 
-.contact .row form .my-alert {
+.contact .row form .alert {
   width: 100%;
   display: flex;
   align-items: center;
@@ -295,12 +295,12 @@ body {
   background: var(--bg);
   border: 1px solid #eee;
   padding-left: 2rem;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .contact .row form .input-group input {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1rem;
   background: none;
   color: #fff;
@@ -308,19 +308,57 @@ body {
 
 .contact .row form .input-group textarea{
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   font-size: 1rem;
   background: none;
   color: #fff;
 }
 
+/* footer  */
+footer {
+  background: var(--primary);
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
 
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+footer .socials a:hover,
+footer .links a:hover{
+  color: var(--bg)
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+} 
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: bold;
+}
 
 
 
 
 /* Media Queries */
-
 /* Laptop  */
 @media (max-width: 1366px) {
   html {
@@ -373,7 +411,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(/img/coffe\ \(3\).jpg) ;
+  background: url(../img/coffe\ \(3\).jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -406,6 +444,18 @@ body {
   font-size: 1.2rem;
 }
 
+.contact .row  {
+  flex-wrap: wrap;
+}
+
+.contact .row .maps {
+  height: 30rem;
+}
+
+.contact .row form {
+  padding-top: 0;
+}
+
 
 }
 /* Mobile Phone*/
@@ -418,7 +468,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(/img/coffe\ \(1\).jpg) ;
+  background: url(../img/coffe\ \(1\).jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
